@@ -1,0 +1,16 @@
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.content {
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:500px;
+  width:70%;
+  border:1px solid black;
+  overflow:auto;
+}

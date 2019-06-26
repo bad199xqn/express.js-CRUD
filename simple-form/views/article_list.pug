@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  
+  ul
+    each article in article_list
+      li 
+        a(href=article.url) #{article.article_title}
+
+    else
+      li There are no articles.

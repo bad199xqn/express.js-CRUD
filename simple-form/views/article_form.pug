@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='article_title') First Name:
+      input#article_title.form-control(type='text' placeholder='Title' name='article_title' required='true' value=(undefined===article_content ? '' : article_content.article_title) )
+      label(for='article_content') Family Name:
+      input#article_content.form-control(type='text' placeholder='Content' name='article_content' required='true' value=(undefined===article_content ? '' : article_content.article_content))
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  br
+  br
+  if error
+    p Error getting dynamic content.
+  else
+    p The number of articles:!{data.article_count}

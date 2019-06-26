@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 #{title}: #{article.article_title}
+  p= article.lifespan
+  p Do you really want to delete this article?
+    
+    form(method='POST' action='')
+      div.form-group
+        input#authorid.form-control(type='hidden',name='articleid', required='true', value=article._id )
+
+      button.btn.btn-primary(type='submit') Delete
